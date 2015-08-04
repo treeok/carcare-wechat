@@ -1,0 +1,11 @@
+- menu = [{href: 'index.html',title:'挣点'},{href: 'trip.html',title:'行程'},{href: 'userinfo.html',title:'用户'}];
+nav(class="navbar navbar-default navbar-fixed-bottom")
+    ul.nav.navbar-nav
+        - for (var i = 0; i < menu.length; i++) {
+        li
+
+            a(href="#{resource}pages/#{menu[i].href}")
+             img(src="#{resource}/img/menu-list.png")
+             | #{menu[i].title}
+        - }
+

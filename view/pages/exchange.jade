@@ -1,0 +1,39 @@
+extends ../layout
+include ../mixin/formele
+block content
+    .container-fluid
+        .row
+            p.title 兑换挣点
+        .row(style="border-bottom:1px solid #ececec;")
+            +formele('账户余额','remain')
+                div
+                    span#remain(style="height:60px;line-height:60px;display:inline-block;") 500
+                    span 挣点
+        .row
+            +formele('支付宝','apily')
+                input#apily(placeholder="98989@qq.com")
+        .row(style="margin-top:15px;")
+            +formele('提现金到支付宝','money')
+                div(style="background:url('#{resource}/img/arrow-right-small.png') 90% 48% no-repeat;")
+                    select#money(style="width:100%;margin:0;padding:0;padding-right:15px;")
+                        option(value="100") 100元
+                        option(value="200") 200元
+                        option(value="300") 300元
+                        option(value="400") 400元
+                        option(value="500") 500元
+                        option(value="600") 600元
+                        option(value="700") 700元
+                        option(value="800") 800元
+                        option(value="900") 900元
+                        option(value="1000") 1000元
+        .row
+            p.tip.text-right(style="margin-top:5px;") 1个挣点=1个集分宝=1分钱
+        .row(style="margin-top:15px;")
+            p.tip(style="margin-top:5px;font-weight：bold;color:#343434;") 友情提示
+            p.tip(style="margin-top:15px;font-size:1em;") 1、剩余挣点大于10000时，可提现金到支付宝，T+5个工作日到账。
+            p.tip(style="margin-top:5px;font-size:1em;") 2、挣点或现金兑换T+5个工作日到账，到账时间为工作日当天下午18点之后。
+        .row.detail-btn(style="margin:45px 15px 0;")
+
+
+
+

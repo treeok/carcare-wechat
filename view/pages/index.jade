@@ -1,0 +1,26 @@
+extends ../layout
+include ../mixin/arrow
+block content
+    .container-fluid
+        .row
+            .title 首页
+        .row
+            .giant
+                .giant-header 累积收益
+                .giant-content
+                .giant-bottom
+                    a(href="#{resource}pages/detail.html")
+                      span
+                      img(src="#{resource}/img/arrow-right.png")
+        .row(style="margin-top:10px;")
+            +arrow('img/earn.png','领取挣点','5个挣点待领取')
+            p(style="border-bottom:1px solid #ececec;margin:0 15px;")
+        .row
+            +arrow('img/alipy.png','兑换挣点','满1000挣点可以提现','exchange.html')
+            p(style="border-bottom:1px solid #ececec;margin:0 15px;")
+        .row
+            +arrow('img/shop.png','挣点商城','挣点兑换超值享受')
+
+
+
+

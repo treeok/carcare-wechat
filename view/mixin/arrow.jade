@@ -1,0 +1,20 @@
+mixin arrow(url,title,txt,link)
+    if link
+        a.arrow(href="#{resource}pages/#{link}")
+            img.left(src="#{resource}#{url}")
+            span.title #{title}
+            if block
+                block
+            else
+                span.content #{txt}
+                img.right(src="#{resource}/img/arrow-right.png")
+    else
+        a.arrow
+            img.left(src="#{resource}#{url}")
+            span.title #{title}
+            if block
+                block
+            else
+                span.content #{txt}
+                img.right(src="#{resource}/img/arrow-right.png")
+

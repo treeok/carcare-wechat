@@ -1,0 +1,5 @@
+mixin formele(txt,id)
+    .form
+        label(for="#{id}") #{txt}
+        if block
+            block

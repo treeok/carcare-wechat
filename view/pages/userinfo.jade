@@ -1,0 +1,32 @@
+extends ../layout
+include ../mixin/user
+include ../mixin/arrow
+block content
+    .container-fluid
+        .row
+            .title 个人主页
+        .row
+            img(src="#{resource}img/user_bg.png" width="100%")
+        .row(style="background-color:#fff;")
+            .col-xs-6(style="padding:0;")
+                +user('我的兑换','alipy.png','3个兑换记录')
+            .col-xs-6(style="padding:0;")
+                +user('我的车辆','car.png','科鲁兹')
+        .row(style="margin-top:10px;")
+            +arrow('img/position.png','爱车定位','')
+            p(style="border-bottom:1px solid #ececec;margin:0 15px;")
+        .row
+            +arrow('img/voltage.png','电压提醒','12.6V')
+            p(style="border-bottom:1px solid #ececec;margin:0 15px;")
+        .row
+            +arrow('img/notice.png','通知提醒','','notice.html')
+        .row(style="margin-top:10px;")
+            +arrow('img/my-equipment.png','我的设备','在线')
+            p(style="border-bottom:1px solid #ececec;margin:0 15px;")
+        .row
+            +arrow('img/invitation.png','邀请好友的挣点','','invitation.html')
+            p(style="border-bottom:1px solid #ececec;margin:0 15px;")
+        .row
+            +arrow('img/zero-plan.png','0元租计划','')
+
+
