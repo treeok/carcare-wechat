@@ -1,3 +1,34 @@
-//
-   Created by NCGZ-DZ- on 2015/8/4.
+extends ../layout
+include ../mixin/arrow
+block content
+    .container-fluid
+        .row
+            .title
+                a(href="#{resource}pages/userinfo.html")
+                    img(src="#{resource}/img/arrow-left.png")
+                |我的邀请
+        .row
+            .giant
+                .giant-header 邀请共获得
+                .giant-content 240元
+        .row
+            table.invite-table(style="width:100%;")
+                thead
+                    tr
+                        th 朋友
+                        th 状态
+                        th 赢得奖励
+                tbody
+                    tr
+                        td 飞天猫
+                        td 已安装
+                        td.invite-earn 5元
+                    tr
+                        td 飞天猫
+                        td 已安装
+                        td.invite-earn 5元
+                    tr
+                        td 飞天猫
+                        td 已安装
+                        td.invite-earn 5元
 

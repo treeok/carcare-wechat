@@ -22,6 +22,14 @@ define(['widget/utils'], function (Utils) {
                 require(['include/exchange'], function (Exchange) {
                     Exchange.init();
                 });
+            }else if(docName == 'trip'){
+                require(['include/trip'], function (Trip) {
+                    Trip.init();
+                });
+            }else if(docName == 'notice'){
+                require(['include/notice'], function (Notice) {
+                    Notice.init();
+                });
             }
 
         }

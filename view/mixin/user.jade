@@ -1,7 +1,15 @@
-mixin user(title,img,content)
-   .user
-      .left
-         img(src="#{resource}img/#{img}")
-      .right
-         .right-top #{title}
-         .right-bottom #{content}
+mixin user(title,img,content,link)
+   if link
+      a.user(href="#{resource}pages/#{link}")
+         .left
+            img(src="#{resource}img/#{img}")
+         .right
+            .right-top #{title}
+            .right-bottom #{content}
+   else
+      a.user
+         .left
+            img(src="#{resource}img/#{img}")
+         .right
+            .right-top #{title}
+            .right-bottom #{content}

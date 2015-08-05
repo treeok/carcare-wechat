@@ -6,10 +6,11 @@ block content
         .row
             .title 个人主页
         .row
-            img(src="#{resource}img/user_bg.png" width="100%")
+            a(href="#{resource}pages/personal.html")
+                img(src="#{resource}img/user_bg.png" width="100%")
         .row(style="background-color:#fff;")
             .col-xs-6(style="padding:0;")
-                +user('我的兑换','alipy.png','3个兑换记录')
+                +user('我的兑换','alipy.png','3个兑换记录','securities.html')
             .col-xs-6(style="padding:0;")
                 +user('我的车辆','car.png','科鲁兹')
         .row(style="margin-top:10px;")

@@ -1,0 +1,23 @@
+extends ../layout
+include ../mixin/security
+block content
+   .container-fluid
+      .row
+         .title
+            a(href="#{resource}pages/userinfo.html")
+               img(src="#{resource}/img/arrow-left.png")
+            |我的兑换
+      .row(style="border-bottom:1px solid #ececec;")
+         +security('security.png','50元蛋糕优惠券','兑换日期：2015年7月30日')
+      .row(style="border-bottom:1px solid #ececec;")
+         +security('security.png','50元蛋糕优惠券','兑换日期：2015年7月30日')
+      .row(style="border-bottom:1px solid #ececec;")
+         +security('security.png','50元蛋糕优惠券','兑换日期：2015年7月30日')
+      .row(style="border-bottom:1px solid #ececec;")
+         +security('security.png','50元蛋糕优惠券','兑换日期：2015年7月30日')
+      .row(style="border-bottom:1px solid #ececec;")
+         +security('security.png','50元蛋糕优惠券','兑换日期：2015年7月30日')
+      .row(style="border-bottom:1px solid #ececec;")
+         +security('security.png','50元蛋糕优惠券','兑换日期：2015年7月30日')
+
+

@@ -1,0 +1,21 @@
+mixin security(url,title,content,link)
+    if link
+        a.security.clearfix(href="#{resource}pages/#{link}")
+            img.left(src="#{resource}img/#{url}")
+            if block
+                block
+            else
+                .content
+                    .top #{title}
+                    .bottom #{content}
+                img.right(src="#{resource}/img/arrow-right.png")
+    else
+        a.security.clearfix
+            img.left(src="#{resource}img/#{url}")
+            if block
+                block
+            else
+                .content
+                    .top 50元蛋糕退换券
+                    .bottom 兑换日期：2015年7月30日
+                img.right(src="#{resource}/img/arrow-right.png")

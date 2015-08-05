@@ -7,24 +7,25 @@ define(['widget/utils'], function (Utils) {
             this.getInfo();
         },
         getInfo: function () {
-            Utils.ajaxJson(base + 'award/homeMessage', {userid: userId}, function (data) {
+            Utils.ajaxJson(base + 'award/getRewardNumber', {userid: userId}, function (data) {
                 data = JSON.parse(data);
                 if(data.flag == 1){
-                    var d = data.responseObject;
-                    $('.giant-content').text(d.total_earning);
-                    $('.giant-bottom>a>span').text('最近收益 0')
+                    $('.giant-content').text(data.rewardNumber);
                 }
-
             });
 
-            Utils.ajaxJson(base + '', {userid: userId}, function (data) {
+            Utils.ajaxJson(base + 'award/getLatestIncome', {userid: userId}, function (data) {
                 data = JSON.parse(data);
                 if(data.flag == 1){
-                    var d = data.responseObject;
-                    $('.giant-content').text(d.total_earning);
-                    $('.giant-bottom>a>span').text('最近收益 0')
+                    $('.giant-bottom>a>span').text('最近收益 +'+data.info[0].SCORE)
                 }
+            });
 
+            Utils.ajaxJson(base + 'award/getReward', {userid: userId}, function (data) {
+                data = JSON.parse(data);
+                if(data.flag == 1){
+
+                }
             });
 
         }

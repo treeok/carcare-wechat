@@ -11,6 +11,9 @@
 @blue-color: #37bdd6;
 @gray-color: #b4b4b4;
 @black-color: #343434;
+@red-color: #fd6500;
+
+@labelWidth: 24px;
 
 body{
     font-size: 12px;
@@ -76,9 +79,9 @@ body{
     img.left{
         width: 30px;
         margin-top: -5px;
+        margin-right: 15px;
     }
     .title{
-        margin-left: 15px;
         font-size: 1.2em;
         color: @black-color;
         background-color: transparent;
@@ -213,6 +216,7 @@ body{
     margin: 15px 0;
     border-right:1px solid #ececec;
     padding: 0 10px;
+    display: block;
     .left{
         float: left;
         img{
@@ -238,49 +242,25 @@ body{
 .switch{
     position: relative;
     margin: 10px auto;
-    height: 26px;
-    width: 45px;
+    height: 28px;
+    width: 51px;
     display: inline-block;
     float: right;
-    background: @blue-color;
+    background: @gray-color;
     border-radius: 15px;
     -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
     box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
     .switch-input {
         display: none;
-    }
-    .switch-label {
-        position: relative;
-        z-index: 2;
-        float: left;
-        width: 58px;
-        line-height: 26px;
-        font-size: 11px;
-        color: rgba(255, 255, 255, 0.35);
-        text-align: center;
-        text-shadow: 0 1px 1px rgba(0, 0, 0, 0.45);
-        cursor: pointer;
-    }
-    .switch-label-off {
-        padding-left: 2px;
-    }
-    .switch-label-on {
-        padding-right: 2px;
-    }
-    &:checked .switch-label {
-        font-weight: bold;
-        color: rgba(0, 0, 0, 0.65);
-        text-shadow: 0 1px rgba(255, 255, 255, 0.25);
-        -webkit-transition: 0.15s ease-out;
-        -moz-transition: 0.15s ease-out;
-        -o-transition: 0.15s ease-out;
-        transition: 0.15s ease-out;
+        width: 24px;
+        height: 24px;
+        margin: 1px 0 0;
     }
     .switch-selection {
         display: block;
         position: absolute;
         z-index: 1;
-        top: 1px;
+        top: 2px;
         left: 1px;
         width: 24px;
         height: 24px;
@@ -293,5 +273,67 @@ body{
         -o-transition: left 0.15s ease-out;
         transition: left 0.15s ease-out;
     }
-}
+    &.active{
+        background: @blue-color;
+        border: none;
+        .switch-selection {
+            top: 2px;
+            left: 26px;
+            border: none;
+        }
+    }
 
+}
+.invite-table{
+    width: 100%;
+    th,td{
+        font-size: 1.2em;
+        font-weight: normal;
+        color: @black-color;
+        text-align: center;
+    }
+    thead tr{
+        height: 45px;
+    }
+    tbody tr{
+        height: 60px;
+        background-color: @white-bgcolor;
+        td.invite-earn{
+            color: @red-color;
+        }
+    }
+}
+.security{
+    background-color: @white-bgcolor;
+    padding: 15px 15px;
+    display: block;
+    position: relative;
+    img.left{
+        width: 95px;
+        border-right: 1px solid #ececec;
+        padding-right: 15px;
+        float: left;
+    }
+    .content{
+        display: inline-block;
+        height: 50px;
+        float: left;
+        margin-left: 15px;
+        .top{
+            font-size: 1.3em;
+            color: @black-color;
+            margin-top: 5px;
+        }
+        .bottom{
+            font-size: 0.8em;
+            color: @gray-color;
+            margin-top: 5px;
+        }
+    }
+    img.right{
+        position: absolute;
+        width: 10px;
+        top: 30px;
+        right: 15px;
+    }
+}

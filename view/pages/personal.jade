@@ -1,0 +1,25 @@
+extends ../layout
+include ../mixin/arrow
+block content
+   .container-fluid
+      .row
+         .title
+            a(href="#{resource}pages/userinfo.html")
+               img(src="#{resource}/img/arrow-left.png")
+            |个人信息
+      .row
+         div(style="height:65px;line-height:65px;margin-left:15px;font-size:1.2em;") 基本信息
+      .row(style="border-bottom:1px solid #ececec;")
+         +arrow('','用户ID')
+            span.content 64
+      .row(style="border-bottom:1px solid #ececec;")
+         +arrow('','手机号码','马上验证','')
+      .row
+         +arrow('','分享码')
+            span.content 9YSBC
+      .row
+         div(style="height:65px;line-height:65px;margin-left:15px;font-size:1.2em;") 补充信息
+      .row
+         +arrow('','保单信息','','')
+
+
